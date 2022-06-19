@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 
 namespace Lkf.Migration.Infrastructure.Settings
 {
-    public class Settings
+    public class Settings : ISettings
     {
+        public string SearchEngineUrl => ConfigurationManager.AppSettings["SearchEngineUrl"];
+        public string FilesPath => ConfigurationManager.AppSettings["FilesPath"];
     }
 }

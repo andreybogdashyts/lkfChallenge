@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lkf.Migration.Infrastructure.Settings
+﻿namespace Lkf.Migration.Infrastructure.Settings
 {
-    public class ISettings
+    public interface ISettings
     {
+        string SearchEngineUrl { get; }
+        string FilesPath { get; }
     }
 }
