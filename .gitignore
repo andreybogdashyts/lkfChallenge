@@ -1,3 +1,6 @@
-bin/*
-obj/*
-
+Lkf.Migration/bin/*
+Lkf.Migration/obj/*
+data/*
+/.vs/*
+/Lkf.Migration.Tests/bin/*
+/Lkf.Migration.Tests/obj/*
