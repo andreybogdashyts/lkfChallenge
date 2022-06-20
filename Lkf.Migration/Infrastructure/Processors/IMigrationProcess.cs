@@ -2,6 +2,6 @@
 {
     public interface IMigrationProcess
     {
-        bool Migrate();
+        Task<bool> Migrate();
     }
 }

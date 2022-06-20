@@ -16,7 +16,8 @@ public class Program
         {
             try
             {
-                scope.Resolve<IMigrationProcess>().Migrate();
+                scope.Resolve<IMigrationProcess>()
+                    .Migrate().Wait();
             }
             catch (Exception ex)
             {
