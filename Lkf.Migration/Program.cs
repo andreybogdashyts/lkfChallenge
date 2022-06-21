@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 namespace Lkf.Migration;
 public class Program
 {
-    static int Main(string[] args)
+    static async Task<int> Main(string[] args)
     {
         Console.WriteLine("Search engine migration has started");
         var processResult = ProcessResultType.Success;
@@ -16,8 +16,9 @@ public class Program
         {
             try
             {
-                scope.Resolve<IMigrationProcess>()
-                    .MigrateAsync().Wait();
+                var mp = scope.Resolve<IMigrationProcess>();
+                var r = await mp.MigrateAsync();
+                processResult =  r ? ProcessResultType.Success : ProcessResultType.Fail;
             }
             catch (Exception ex)
             {

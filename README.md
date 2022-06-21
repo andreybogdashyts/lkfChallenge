@@ -20,6 +20,14 @@ Memory allocation: 1.5 GB
 ### Other Notes:
 ```
 ** I use 192.168.0.77:9200 instead of 127.0.0.1:9200 due to limitation of my local environment so basically elastic hosted on another machine
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<appSettings>
+		<add key="SearchEngineUrl" value="http://192.168.0.77:9200" />
+		<add key="FilesPath" value="C:\\input" />
+	</appSettings>
+</configuration>
+
 
 ** Found that some lines in collections file is too short so temp solution is just to skip them
 

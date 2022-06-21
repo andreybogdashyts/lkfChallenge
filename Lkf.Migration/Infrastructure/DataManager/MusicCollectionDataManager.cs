@@ -26,7 +26,7 @@ namespace Lkf.Migration.Infrastructure.DataManager
             BatchOptions = new List<BatchOptions>();
         }
 
-        public List<BatchOptions> BatchOptions { get; private set; }
+        public List<BatchOptions> BatchOptions { get; set; }
 
         public List<Collection> GetCollections(BatchOptions options)
         {
