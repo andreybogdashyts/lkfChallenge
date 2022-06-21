@@ -21,27 +21,29 @@ namespace Lkf.Migration.Infrastructure.SearchEngine
             {
                 throw r.OriginalException;
             }
-            return r.Exists;
+            return r.IsValid;
         }
 
-        public async Task CreateCollection(string name)
+        public async Task<bool> CreateCollection(string name)
         {
             var cr = await _client.Indices.CreateAsync(name, index => index.Map<Collection>(x => x.AutoMap()));
-            if (!cr.IsValid)
+            if (cr.OriginalException != null)
             {
                 throw cr.OriginalException;
             }
+            return cr.IsValid;
         }
 
-        public async Task SendBatch(string name, List<Collection> collections)
+        public async Task<bool> SendBatch(string name, List<Collection> collections)
         {
             var br = await _client.BulkAsync(b => b
                .Index(name)
                .IndexMany(collections));
-            if (!br.IsValid)
+            if (br.OriginalException != null)
             {
                 throw br.OriginalException;
             }
+            return br.IsValid;
         }
     }
 }

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lkf.Migration", "Lkf.Migration\Lkf.Migration.csproj", "{10C36F14-0D2D-4F71-8E58-2197A074373A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lkf.Migration.Tests", "Lkf.Migration.Tests\Lkf.Migration.Tests.csproj", "{67E36AA9-16B4-4423-9BBB-B778CF8DAF92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lkf.Migration.Tests", "Lkf.Migration.Tests\Lkf.Migration.Tests.csproj", "{67E36AA9-16B4-4423-9BBB-B778CF8DAF92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
